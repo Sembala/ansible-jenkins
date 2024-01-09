@@ -5,12 +5,14 @@
     state: present
     update_cache: yes
     cache_valid_time: 3600
+  remote_user: jenkins
   become: yes
 
 - name: start nginx
   service:
     name: nginx
     state: started
+  remote_user: jenkins
   become: yes
 
 - name: index
